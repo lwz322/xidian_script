@@ -4,4 +4,4 @@ log_file="./xidian_flow.log"
 query_output=$(python3 ./xidian_flow_log.py 2>/dev/null)
 query_value=$(echo $query_output | awk '{print $6}')
 [ "$pre_value" != "$query_value" ] || exit 0
-echo $query_output $useage >> $log_file
+echo $query_output>> $log_file
